@@ -26,8 +26,8 @@ const {getFlashMessages} = require("./utils/middlewares")
 const user = require("./models/user")
 
 
-// const DBUrl = process.env.DB_URL
-const DBUrl = "mongodb://localhost:27017/yelp-camp"
+const DBUrl = process.env.DB_URL
+// const DBUrl = "mongodb://localhost:27017/yelp-camp"
 
 mongoose.connect(DBUrl)
 const db = mongoose.connection
@@ -46,7 +46,7 @@ const sessionStore = MongoStore.create({
     mongoUrl: DBUrl,
     touchAfter:24*60*60,
     crypto: {
-        secret: "sessionStoreConfig"
+        secret: process.env.SECRET
     }
 })
 
@@ -57,7 +57,7 @@ sessionStore.on("error", function(err) {
 const sessionConfig = {
     store: sessionStore,
     name: "sid",
-    secret: "session",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -92,7 +92,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/dekrwwflr/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/`, //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com/",
             ],
             fontSrc: ["'self'", ...rules.fontSrcUrls],
@@ -131,7 +131,7 @@ app.use((err, req, res, next) => {
 })
 
 const server = app.listen(3000, ()=>{
-    console.log(`listening on http://localhost:3000`)
+    console.log(`listening`)
 }) 
 
 server.timeout = 5*60*1000 // 5 min
