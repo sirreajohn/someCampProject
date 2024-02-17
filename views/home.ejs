@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>YelpCamp</title>
+</head>
+
+<body crossorigin="anonymous" class="d-flex text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <div class="credit-box">
+            <p crossorigin="anonymous" id="credits">Photo by <a href="https://unsplash.com/@byadoniaa">Pars Sahin</a> on Unsplash</p>
+        </div>
+
+        <div class="row mb-3 mt-5">
+            <h1 class="text-center text-light">Yelpcamp</h1>
+        </div>
+        <div class="row mb-3 w-50 offset-3">
+            <p class="text-center text-light text-break">
+                Welcome to YelpCamp, <br> your go-to destination for discovering and sharing the best campgrounds
+                around! Whether you're a seasoned camper or new to the outdoors, YelpCamp is here to help you find the
+                perfect spot for your next adventure. Browse through our extensive listings, complete with detailed
+                descriptions, photos, and reviews from fellow campers, to find the ideal campground that suits your
+                preferences.
+                <br>
+                <br>
+                But YelpCamp isn't just about finding great places to stay—it's also about sharing your experiences and
+                helping others make informed decisions. Join our community today to create your own campground listings,
+                leave honest reviews, and connect with other outdoor enthusiasts. With YelpCamp, planning your next
+                camping trip has never been easier or more enjoyable!
+
+            </p>
+        </div>
+        <div class="w-100 h-25">
+            <div class="vr bar h-75"></div>
+        </div>
+
+        <% if (!currUser) { %>
+            <div class="row mt-3 justify-content-center d-flex">
+                <button class="btn btn-dark w-25 flex-wrap" style="margin-right: 16px;"
+                    onclick="location.href='/login'">Login</button>
+                <button class="btn btn-dark w-25 flex-wrap" onclick="location.href='/register'">SignUp</button>
+            </div>
+        <% } %>
+        <div class="row mt-3 justify-content-center mb-3">
+            <button class="btn btn-dark w-25" onclick="location.href='/campgrounds'">Campgrounds</button>
+        </div>
+
+
+        <footer class="bg-body-dark text-center text-lg-start mt-auto">
+            <div class="text-center p-3 text-light" style="background-color: rgba(255, 255, 255, 0.136);">
+                © 2024 Yelpcamp: made by Mahesh Patapalli 😶‍🌫️
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

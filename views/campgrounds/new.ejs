@@ -1,0 +1,48 @@
+<%- layout("./layouts/boilerplate") %>
+<div class="col-md-6 offset-md-3">
+    <h1 class="text-center">Create a new Campground</h1>
+    <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label" for="name">Title</label>
+            <input class="form-control" type="text" name="campground[title]" id = "name" required>
+            <div class="valid-feedback">
+                Looks Good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="location">Location</label>
+            <input class="form-control" type="text" name="campground[location]" id = "location" required>
+            <div class="valid-feedback">
+                Looks Good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="price">Price per night</label>
+            <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input class="form-control" type="text" name="campground[price]" id = "price" placeholder="0.00" required>
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-control" name="campground[description]" id="description" cols="30" rows="5" required></textarea>
+            <div class="valid-feedback">
+                Looks Good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">Upload Images</label>
+                <input class="form-control" type="file" id="formFileMultiple" name="image" multiple>
+            </div>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success">Add Campground</button>
+        </div>
+    </form>
+</div>
+
+

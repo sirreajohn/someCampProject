@@ -1,0 +1,38 @@
+/* body {
+    background-image: url("https://res.cloudinary.com/dekrwwflr/image/upload/v1708055848/YelpCamp/rs7pqpgjlytg7njmopw6.jpg");
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+} */
+
+body { 
+    background: url("https://res.cloudinary.com/dekrwwflr/image/upload/w_1920,h_1080/v1708055848/YelpCamp/rs7pqpgjlytg7njmopw6.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-shadow: inset 0 0 0 50vw rgba(44, 39, 39, 0.627);
+    font-family: consolas, Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.credit-box {
+    position: relative;
+    height: 2rem;
+}
+
+
+#credits {
+    color: white;
+    font-size:x-small;
+    font-family: consolas, Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bar {
+    vertical-align: center;
+    background-color: white;
+    width: 2px;
+}

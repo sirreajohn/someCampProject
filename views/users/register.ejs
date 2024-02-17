@@ -1,0 +1,48 @@
+<%- layout("./layouts/boilerplate") %>
+<div class="container justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow">
+                <figure class="figure">
+                    <img src="https://res.cloudinary.com/dekrwwflr/image/upload/v1708093152/YelpCamp/ctxdhgbiqa12pqnj67mb.jpg" alt="" class="card-img-top figure-img">
+                    <figcaption class="figure-caption" style="margin-left: 5px;">
+                      <i class="photo-credit">Photo by <a href="https://unsplash.com/@benshares?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ben Duchac</a> on <a href="https://unsplash.com/photos/white-camping-tent-beside-mountain-3fJOXw1RbPo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>  </i>
+                    </figcaption>
+                </figure>
+
+                <div class="card-body">
+                    <h5 class="card-title">Register</h5>
+                    <form class="validated-form" action="/register" method="POST" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Username</label>
+                            <input class="form-control" type="text" id="username" name="username" placeholder="eg: Alexa99" required autofocus>
+                            <div class="valid-feedback">
+                                Looks Good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-control" type="email" id="email" name="email" placeholder="eg: Alexa@fakedomain.com" required>
+                            <div class="valid-feedback">
+                                Looks Good!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                            <div class="valid-feedback">
+                                Looks Good!
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success btn-block" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
