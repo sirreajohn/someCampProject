@@ -134,4 +134,4 @@ const server = app.listen(3000, ()=>{
     console.log(`listening`)
 }) 
 
-server.timeout = 5*60*1000 // 5 min
+// server.timeout = 5*60*1000 // 5 min
